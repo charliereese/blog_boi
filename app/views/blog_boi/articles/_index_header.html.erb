@@ -1,0 +1,31 @@
+<div class="bg-primary text-white py-3 border-top-sm-only">
+
+	<div class="container">
+		
+		<div class="row text-center">
+
+			<% if !@category_title %>
+
+				<h1 class="col-12 mb-0">
+					The <%= company_name %> Blog
+				</h1>
+
+				<p class="lead col-11 col-md-9 col-lg-7 col-xl-6 mx-auto mt-3 mb-0">
+					<%= blog_description %>
+				</p>
+
+			<% else %>
+			
+				<h1 class="col-12">Tutorials and Articles on <%= @category_title %></h1>
+
+			<% end %>
+
+			<div class="mt-2 mt-md-4 col-12 star">
+				<%= image_tag("blog_boi/star.svg") %>
+			</div>
+			
+		</div>
+
+	</div>
+
+</div>

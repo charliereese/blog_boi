@@ -1,0 +1,43 @@
+<header class="blog-boi-blog text-white">
+
+	<div class="bg-primary text-center text-md-left">
+
+		<div class="container">
+
+			<div class="row pt-4 pb-3">
+				
+				<div class="col-12 col-md-6 col-lg-7">
+					
+					<a href='<%= blog_boi.root_url %>' class="text-white">
+						<%= image_tag company_logo_path, class: 'logo mr-2 align-top' %>
+					</a>
+
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-5 text-primary-light font-weight-light mt-3 mt-md-0">
+					<em>
+						Brought to you by <a href="/" class="text-orange"><%= company_name %></a>, a <%= company_description %>
+					</em>
+				</div>
+
+			</div>
+
+		</div>
+	
+	</div>
+
+</header>
+
+<% if notice %>
+
+	<div class="container mt-4">
+		
+		<div class="row">
+				
+			<div id="notice" class="col-12"><%= notice %></div>
+
+		</div>
+
+	</div>
+
+<% end %>

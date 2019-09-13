@@ -1,0 +1,25 @@
+<main class="blog-boi blog index text-center">
+	
+	<%= render 'index_header' %>
+
+	<div class="container mt-4">
+		
+		<div class="row">
+
+			<% if is_admin %>
+
+				<div class="col-12 mt-4">
+					<%= link_to 'New Article', new_article_path, class: 'btn-primary rounded' %>
+				</div>
+
+			<% end %>
+			
+			<%= render @articles %>
+			
+		</div>
+
+	</div>
+
+	
+</main>
+

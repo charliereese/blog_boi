@@ -1,0 +1,16 @@
+$theme-colors: (
+	"msg": #309CFA,
+	"orange": #F5A623,
+	"primary-light": #dbccf5,
+  "primary": #6610F2,
+  "info": #f1f8ff,
+  "light": #f6f8fa,
+  "dark": #24292e,
+  "warning": #E0B627,
+);
+
+// Default link colour
+$link-color: map-get($theme-colors, 'primary');
+
+// Default font
+$font-family-sans-serif: 'Roboto';

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>[TBU - configurable]</title>
+  <meta name="viewport" content="width=device-width">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "blog_boi/application", media: "all" %>
+  <%= javascript_include_tag "blog_boi/application" %>
+</head>
+<body>
+
+	<%= render 'layouts/blog_boi/header' %>
+
+	<%= yield %>
+
+	<%= render 'layouts/blog_boi/footer' %>
+</body>
+</html>

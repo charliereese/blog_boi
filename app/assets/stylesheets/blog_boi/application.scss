@@ -1,0 +1,29 @@
+@import 'blog_boi/blog_boi';
+@import 'blog_boi/_blog';
+@import 'blog_boi/_header';
+@import 'blog_boi/_footer';
+
+[class^="btn"] {
+	padding: 8px;
+	display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+}
+
+.lead {
+	font-size: 18px;
+}
+
+@media (max-width: 768px) { 
+
+	.border-top-sm-only {
+		border-top: 1px solid white;	
+	}
+
+	.lead {
+		font-size: 16px;
+	}
+	
+}

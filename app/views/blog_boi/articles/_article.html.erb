@@ -1,0 +1,41 @@
+<div class="col-12 col-md-9 col-lg-6 d-block mx-auto mt-4">
+
+	<%= render partial: 'category', collection: article.categories %>
+
+  <a class="d-block article mt-2" 
+		href="/blog/<%= article.slug %>">
+  	
+  	<h2 class="text-blue mb-0">
+  		<%= article.title %>		
+  	</h2>
+  	
+  </a>
+  
+  <div class="mt-2">
+
+  	<ul class="list-inline mb-0">
+  	
+  		<li class="list-inline-item">
+  			<%= article.author.name %>
+  		</li>
+
+  		<li class="list-inline-item">
+  			<%= article.updated_at.strftime("%B %e, %Y") %>
+  		</li>
+
+  	</ul>
+	
+	</div>
+	
+
+	<% if is_admin %>
+	
+		<div class="mt-2">
+	    <%= link_to 'Show', article %> |
+	    <%= link_to 'Edit', edit_article_path(article) %> |
+	    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>	
+		</div>
+
+	<% end %>
+
+</div>
