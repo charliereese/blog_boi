@@ -1,6 +1,7 @@
 module BlogBoi
   class ApplicationController < ::ApplicationController
     protect_from_forgery with: :exception
+    before_action :create_meta_tags_obj
 
     # TBU
   	def is_admin
@@ -16,5 +17,10 @@ module BlogBoi
     def set_categories
     	@categories = Category.all
     end
+
+    def create_meta_tags_obj
+    	@meta_tags = {}
+    end
+
   end
 end

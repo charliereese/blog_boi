@@ -2,6 +2,14 @@
 # This command will automatically be run when you run "rails" with Rails gems
 # installed from the root of your application.
 
+# Use simplecov for system tests
+# if ENV['RAILS_ENV'] == 'test'
+  # require 'simplecov'
+  # SimpleCov.start 'rails'
+  # SimpleCov.minimum_coverage_by_file 80
+  # puts "required simplecov"
+# end
+
 ENGINE_ROOT = File.expand_path('..', __dir__)
 ENGINE_PATH = File.expand_path('../lib/blog_boi/engine', __dir__)
 APP_PATH = File.expand_path('../test/dummy/config/application', __dir__)

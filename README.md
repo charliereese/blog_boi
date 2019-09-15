@@ -12,10 +12,15 @@ gem 'blog_boi', path: '../blog_boi'
 
 _Note: path may move to github and not be relative_
 
-2. Add this line to your config/application.rb file:
+2. Add these lines to your config/application.rb file:
 
 ```ruby
 require "active_storage/engine" # If doesn't exist already
+
+ActiveStorage::Engine.config
+.active_storage
+.content_types_to_serve_as_binary
+.delete('image/svg+xml')
 ```
 
 3. And then execute:
@@ -62,6 +67,12 @@ See lib/blog_boi.rb for all customization options.
 - Run system tests: `rake app:test:system`
 - Run all tests: `rake` or `rake test`
 - In normal rails apps: running single test is possible, but not sure how (or if functionality included out of box for engine). Can also run a particular test method from the test case by providing the -n or --name flag. Can also run an entire directory of tests by providing the path to the directory. I don't think any of this works out of the box for engines. How can I get this to work?
+
+**B.1 Test coverage**
+
+Exists in `coverage` folder in root directory.
+
+To view in a browser, execute from root directory: `open coverage/index.html`
 
 ## C) Custom style / SCSS
 

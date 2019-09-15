@@ -1,3 +1,5 @@
+require 'kramdown'
+
 module BlogBoi
   class Article < ApplicationRecord
   	attr_writer :category_names, :author_name
@@ -26,7 +28,7 @@ module BlogBoi
 		}
 
 		#########################
-		# Public methods
+		# Methods
 		#########################
 
 		def read_time
@@ -45,6 +47,10 @@ module BlogBoi
 
 		def category_names
 			@category_names || categories.pluck(:name).join(', ')
+		end
+
+		def markdown_text
+			Kramdown::Document.new(text).to_html
 		end
 
 		private

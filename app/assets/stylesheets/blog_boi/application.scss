@@ -16,6 +16,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 18px;
 }
 
+.mb-neg-md-125-sm-50 {
+	margin-bottom: -125px;
+}
+
+.mt-md-125-sm-50 {
+	margin-top: 125px;
+}
+
+.font-16px {
+	font-size: 16px !important;
+}
+
 @media (max-width: 768px) { 
 
 	.border-top-sm-only {
@@ -24,6 +36,14 @@ h1, h2, h3, h4, h5, h6 {
 
 	.lead {
 		font-size: 16px;
+	}
+
+	.mb-neg-md-125-sm-50 {
+		margin-bottom: -50px;
+	}
+
+	.mt-md-125-sm-50 {
+		margin-top: 50px;
 	}
 	
 }

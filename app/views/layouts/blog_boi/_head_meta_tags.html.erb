@@ -1,0 +1,7 @@
+<title><%= @meta_tags[:title] || company_name + ' Blog' %></title>
+<meta property="og:title" content="<%= @meta_tags[:title] || blog_seo_title %>" />
+
+<meta property="og:site_name" content="<%= company_name %>" />
+
+<meta name="description" content="<%= @meta_tags[:description] || blog_seo_description %>" />
+<meta property="og:description" content="<%= @meta_tags[:description] || blog_seo_description %>" />

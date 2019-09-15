@@ -1,4 +1,5 @@
 <%= form_with(model: article, local: true) do |form| %>
+  
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -11,42 +12,42 @@
     </div>
   <% end %>
 
-	<div class="field">
+	<div class="field mt-3">
 	  <%= form.label :author_name %><br>
-	  <%= form.text_field :author_name %>
+	  <%= form.text_field :author_name, placeholder: 'e.g. Charlie Reese', class: 'form-control' %>
 	</div>
 
-  <div class="field">
+  <div class="field mt-3">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: 'e.g. Great Title: 3 Reasons Why', class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field mt-3">
     <%= form.label :slug %>
-    <%= form.text_field :slug %>
+    <%= form.text_field :slug, placeholder: 'e.g. appointment-reminders-for-dentists', class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
-  </div>
-
-  <div class="field">
+  <div class="field mt-3">
     <%= form.label :category_names %>
-    <%= form.text_area :category_names %>
+    <%= form.text_field :category_names, placeholder: 'e.g. no-shows, sales growth', class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field mt-3">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: 'd-block' %>
   </div>
 
   <% if @article.image.attached? %>
-  	<div class="text-left">
+  	<div class="text-left mt-1">
   		<div>Uploaded image:</div>
 			<%= image_tag main_app.url_for(@article.image), class: 'w-25' %>
 		</div>
 	<% end %>
+
+  <div class="field mt-3">
+    <%= form.label :text %>
+    <%= form.text_area :text, size: "20x20", class: 'form-control' %>
+  </div>
 
   <div class="actions mt-3">
     <%= form.submit class: 'btn btn-primary' %>

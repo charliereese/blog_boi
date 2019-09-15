@@ -5,6 +5,11 @@ ENV["RAILS_ENV"] = "test"
 require "minitest/reporters"
 Minitest::Reporters.use!
 
+# Use simplecov for test coverage
+require 'simplecov'
+SimpleCov.start 'rails'
+# SimpleCov.minimum_coverage_by_file 80
+
 begin
 	Rails.application.configure do
   	# Disable request forgery protection in test environment.

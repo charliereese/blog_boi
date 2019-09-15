@@ -4,8 +4,12 @@ one:
   title: Blog article A
   text: It is so lit. You wouldn't even know
   author: one
+  description: Lit ass description for SEOz
+  slug: blog-article-a
 
 two:
   title: Blog article B
   text: Mucho things. Such blog
   author: one
+  description: Lit ass description for SEOz
+  slug: blog-article-b

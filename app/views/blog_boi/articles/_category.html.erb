@@ -1,4 +1,6 @@
-<a class="badge border border-primary mx-1 text-primary" href="/blog/category/<%= category.name.downcase %>">
+<% badge_class ||= nil %>
+
+<a class="badge border border-primary mx-1 text-primary <%= badge_class %>" href="/blog/category/<%= category.name.downcase %>">
 	
 	<%= category.name.capitalize %>
 		

@@ -1,7 +1,8 @@
 require "blog_boi/engine"
 
 module BlogBoi
-  mattr_accessor :author_class, :company_name, :company_logo_path, :company_description, :blog_description
+  mattr_accessor :author_class, :company_name, :company_logo_path, :company_description, :blog_description,
+  	:blog_seo_description, :blog_seo_title
 
   class << self
 		def author_class
@@ -23,4 +24,6 @@ module BlogBoi
 
   # Blog info
   self.blog_description = 'We help your business reduce no-shows, get more reviews, and increase sales and productivity: detailed tutorials and insight from business owners and experts'
+  self.blog_seo_description = blog_description
+  self.blog_seo_title = blog_seo_title
 end

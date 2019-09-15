@@ -25,6 +25,7 @@ group :test do
 	# For testing
 	gem 'byebug'
 	gem 'minitest-reporters'
+	gem 'simplecov'
 end
 
 # To use a debugger

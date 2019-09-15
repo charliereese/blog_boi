@@ -7,10 +7,10 @@ module BlogBoi
     include Engine.routes.url_helpers
 
     setup do
+      @routes = Engine.routes
+      # B. use the engine's route to get there, rather than the application's one
       @article = blog_boi_articles(:one)
       @author = users(:one)
-      # B. use the engine's route to get there, rather than the application's one
-      @routes = Engine.routes
     end
 
     test "should get index" do
@@ -37,14 +37,23 @@ module BlogBoi
 
     test "should create article" do
       assert_difference('Article.count') do
-        post articles_url, params: { article: { text: @article.text, title: @article.title } }
+        post articles_url, params: { 
+        	article: { 
+        		text: 'Cool new story', 
+        		title: 'Title thing',
+        		author_name: 'Charlie Reese',
+        		category_names: 'stuff A, stuff B',
+        		description: 'Great description of article',
+        		slug: 'cool-new-article'
+        	} 
+        }
       end
 
-      assert_redirected_to article_url(Article.last)
+      assert_redirected_to article_url(Article.last.slug)
     end
 
     test "should show article" do
-      get article_url(@article)
+      get article_url(@article.slug)
       assert_response :success
     end
 
@@ -54,8 +63,17 @@ module BlogBoi
     end
 
     test "should update article" do
-      patch article_url(@article), params: { article: { text: @article.text, title: @article.title } }
-      assert_redirected_to article_url(@article)
+      patch article_url(@article), params: { 
+      	article: { 
+      		text: 'Cool new story', 
+      		title: 'Title thing',
+      		author_name: 'Charlie Reese',
+      		category_names: 'stuff A, stuff B',
+      		description: 'Great description of article',
+      		slug: 'cool-new-article'
+      	} 
+      }
+      assert_redirected_to article_url('cool-new-article')
     end
 
     test "should destroy article" do

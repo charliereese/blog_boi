@@ -14,6 +14,7 @@ module BlogBoi
 
     # GET /articles/1
     def show
+    	@meta_tags[:title] = @article[:title]
     end
 
     # GET /articles/new
@@ -70,7 +71,7 @@ module BlogBoi
 
       # Only allow a trusted parameter "white list" through.
       def article_params
-        params.require(:article).permit(:title, :text, :author_name, :category_names, :image)
+        params.require(:article).permit(:title, :text, :author_name, :category_names, :slug, :description, :image)
       end
   end
 end
