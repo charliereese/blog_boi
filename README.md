@@ -7,7 +7,9 @@ BlogBoi is a rails gem / engine that provides out-of-the-box blogging functional
 1. Add this line to your application's Gemfile:
 
 ```ruby
-gem 'blog_boi', path: '../blog_boi'
+gem 'blog_boi', 
+	git: "git@github.com:charliereese/blog_boi.git",
+	tag: "v0.0.1"
 ```
 
 _Note: path may move to github and not be relative_
@@ -53,7 +55,9 @@ _Note: to run migrations only for certain engine, rails db:migrate SCOPE=blog_bo
 mount BlogBoi::Engine, at: "/blog"
 ```
 
-5. And then add the engines configuration options in an initializer file (named blog_boi.rb):
+5. Customize scss colour scheme by creating `stylesheets/bootstrap_customizer.scss`. See example in `test/dummy/app/assets/stylesheets`.
+
+6. And then add the engines configuration options in an initializer file (named blog_boi.rb):
 
 ```ruby
 BlogBoi.author_class = "User" # name of active record model containing authors with property called name (for author's name)
