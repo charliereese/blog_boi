@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.version     = BlogBoi::VERSION
   spec.authors     = ["Charlie Reese"]
   spec.email       = ["j.charles.reese@gmail.com"]
-  spec.homepage    = "https://charliereese.ca"
+  spec.homepage    = "https://github.com/charliereese/blog_boi"
+  spec.metadata    	 = { "source_code_uri" => "https://github.com/charliereese/blog_boi" }
   spec.summary     = "BlogBoi is a rails engine for adding blogging functionality to your rails project."
   spec.description = "Easily add blogging functionality to your rails project using BlogBoi."
   spec.license     = "MIT"

@@ -11,3 +11,4 @@ test/dummy/tmp/
 coverage
 .byebug_history
 .DS_Store
+*.gem
