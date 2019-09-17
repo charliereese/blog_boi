@@ -7,9 +7,7 @@ BlogBoi is a rails gem / engine that provides out-of-the-box blogging functional
 1. Add this line to your application's Gemfile:
 
 ```ruby
-gem 'blog_boi', 
-	git: "git@github.com:charliereese/blog_boi.git",
-	tag: "v0.0.1"
+gem 'blog_boi', '~> 0'
 ```
 
 _Note: path may move to github and not be relative_
