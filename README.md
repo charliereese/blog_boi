@@ -91,18 +91,22 @@ Override the header or footer by placing your own files at `views/layouts/_heade
 
 ## E) License
 
-The gem is currently private property. It will eventually be made available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is currently available as open source software under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## F) Updating gem version
+## F) Contributing
 
-**F.1 Update version**
+This gem is currently not accepting contributions.
+
+## G) Updating gem version (for maintainers)
+
+**G.1 Update version**
 
 In `lib/blog_boi/version.rb` update version.
 
-**F.2 Build gem**
+**G.2 Build gem**
 
 `gem build blog_boi.gemspec`
 
-**F.3 Push gem**
+**G.3 Push gem**
 
 `gem push blog_boi-X.X.X.gem` (replace X's with version)
