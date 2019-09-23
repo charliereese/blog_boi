@@ -2,6 +2,8 @@
 
 BlogBoi is a rails gem / engine that provides out-of-the-box blogging functionality to your rails application
 
+WARNING: v0.0.1 and v0.0.2 are not yet stable / production ready
+
 ## A) Installation
 
 1. Add this line to your application's Gemfile:
@@ -95,7 +97,9 @@ The gem is currently available as open source software under the terms of the [M
 
 ## F) Contributing
 
-This gem is currently not accepting contributions.
+This gem is currently not actively accepting contributions. 
+
+With that in mind, if you'd like to make a fix / change, please create a pull request (and when I have a moment - probably in a couple weeks time - I'll have a look)!
 
 ## G) Updating gem version (for maintainers)
 
