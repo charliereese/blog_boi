@@ -114,3 +114,8 @@ In `lib/blog_boi/version.rb` update version.
 **G.3 Push gem**
 
 `gem push blog_boi-X.X.X.gem` (replace X's with version)
+
+**G.4 Tag GitHub**
+
+`git tag -a vX.X.X -m "Msg"`
+`git push --tags`

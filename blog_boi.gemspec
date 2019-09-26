@@ -26,11 +26,11 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "kramdown", "~> 2.1.0"
-  spec.add_dependency "rails", "~> 6.0.0"
+  spec.add_dependency "kramdown", '~> 2.1', '>= 2.1.0'
+  spec.add_dependency "rails", '~> 6.0', '>= 6.0.0'
   spec.add_dependency 'bootstrap', '~> 4.3'
   spec.add_dependency 'jquery-rails', '~> 4.3', '>= 4.3.3'
   spec.add_dependency 'rails-ujs', '~> 0.1.0'
 
-  spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "sqlite3", '~> 0'
 end
