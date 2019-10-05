@@ -4,12 +4,14 @@ module BlogBoi
     before_action :create_meta_tags_obj
 
     # TBU
-  	def is_admin
-  		if true 
+  	def authenticate_admin
+  		if !defined?(admin_signed_in?) 
+  			raise BlogBoi::MethodNotImplementedByParentApplication, "admin_signed_in?"
+  		elsif admin_signed_in?
   			true
   		else
   			redirect_to root_path
-  		end 
+  		end
   	end
 
     protected

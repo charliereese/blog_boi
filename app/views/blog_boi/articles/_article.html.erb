@@ -28,10 +28,10 @@
 	</div>
 	
 
-	<% if is_admin %>
+	<% if is_admin? %>
 	
 		<div class="mt-2">
-	    <%= link_to 'Show', article %> |
+	    <%= link_to 'Show', article_path(article.slug) %> |
 	    <%= link_to 'Edit', edit_article_path(article) %> |
 	    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>	
 		</div>

@@ -1,4 +1,5 @@
 require "blog_boi/engine"
+require "blog_boi/error_classes"
 
 module BlogBoi
   mattr_accessor :author_class, :company_name, :company_logo_path, :company_description, :blog_description,

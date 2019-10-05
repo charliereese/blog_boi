@@ -43,16 +43,17 @@
 
 				<%= render 'article_body' %>
 
-				<% if is_admin %>
+				<div class="mt-5">
+					
+					<% if is_admin? %>
 
-					<div class="mt-5">
-						
 						<%= link_to 'Edit', edit_article_path(@article) %> |
-						<%= link_to 'Back', articles_path %>
 						
-					</div>
-
-				<% end %>
+					<% end %>
+					
+					<%= link_to 'Back', articles_path %>
+	
+				</div>
 
 			</div>
 

@@ -9,6 +9,15 @@ module BlogBoi
       @article = blog_boi_articles(:one)
       # B. use the engine's route to get there, rather than the application's one
       @routes = Engine.routes
+
+      # Parent App admin_signed_in? returns false
+      # Because admin is logged out
+      class ::ApplicationController < ::ActionController::Base
+				helper_method :admin_signed_in?
+			  def admin_signed_in?
+			    true
+			  end
+			end
     end
 
     test "visiting the index" do

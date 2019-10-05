@@ -1,5 +1,3 @@
-require 'byebug'
-
 module BlogBoi
   
   module ApplicationHelper
@@ -17,9 +15,12 @@ module BlogBoi
 
   	end
 
-  	# TBU
-  	def is_admin
-  		true
+  	def is_admin?
+  		if defined?(admin_signed_in?) 
+  			admin_signed_in?
+  		else
+  			raise BlogBoi::MethodNotImplementedByParentApplication, "admin_signed_in?"
+  		end
   	end
   
   	def controller_action

@@ -10,6 +10,8 @@
   <%= stylesheet_link_tag "blog_boi/application", media: "all" %>
   <%= stylesheet_link_tag "bootstrap_customizer", media: "all" %>
   <%= javascript_include_tag "blog_boi/application" %>
+
+  <%= render 'layouts/blog_boi/head_extension' if lookup_context.exists?('layouts/blog_boi/_head_extension') %>
 </head>
 <body>
 

@@ -15,6 +15,8 @@
 	<div class="field mt-3">
 	  <%= form.label :author_name %><br>
 	  <%= form.text_field :author_name, placeholder: 'e.g. Charlie Reese', class: 'form-control' %>
+	  <small class="d-block">Existing authors: <%= str_of_authors %></small>
+	  <small class="d-block"><span class="text-danger">Warning</span>: entering a new name will create a new <%= BlogBoi.author_class || '' %> entry in DB with only name filled in.</small>
 	</div>
 
   <div class="field mt-3">

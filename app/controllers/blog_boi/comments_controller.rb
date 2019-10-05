@@ -2,7 +2,7 @@ require_dependency "blog_boi/application_controller"
 
 module BlogBoi
   class CommentsController < ApplicationController
-  	before_action :set_categories, :is_admin
+  	before_action :set_categories, :authenticate_admin
 
   	def create
 		  @article = Article.find(params[:article_id])
