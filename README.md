@@ -1,3 +1,5 @@
+By [Charlie Reese](https://charliereese.ca) at [Clientelify](https://clientelify.com)
+
 # BlogBoi
 
 BlogBoi is a rails gem / engine that provides out-of-the-box blogging functionality to your rails application
@@ -131,6 +133,6 @@ In `lib/blog_boi/version.rb` update version.
 
 `git add -A`
 `git commit -m "Msg"`
-`git tag -a vX.X.X -m "Msg"`
 `git push`
+`git tag -a vX.X.X -m "Msg"`
 `git push --tags`

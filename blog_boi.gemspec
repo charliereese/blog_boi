@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = "https://github.com/charliereese/blog_boi"
   spec.metadata    	 = { "source_code_uri" => "https://github.com/charliereese/blog_boi" }
   spec.summary     = "BlogBoi is a rails engine for adding blogging functionality to your rails project."
-  spec.description = "Easily add blogging functionality to your rails project using BlogBoi. WARNING: v0.0.1 and v0.0.2 are not yet stable / production ready."
+  spec.description = "Easily add blogging functionality to your rails project using BlogBoi."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
