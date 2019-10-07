@@ -30,6 +30,11 @@
   </div>
 
   <div class="field mt-3">
+    <%= form.check_box :hidden %>
+    <%= form.label :hidden %>
+  </div>
+
+  <div class="field mt-3">
     <%= form.label :category_names %>
     <%= form.text_field :category_names, placeholder: 'e.g. no-shows, sales growth', class: 'form-control' %>
   </div>

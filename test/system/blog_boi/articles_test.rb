@@ -6,12 +6,12 @@ module BlogBoi
   	include Engine.routes.url_helpers
  
     setup do
-      @article = blog_boi_articles(:one)
+    	@mount_path = '/blog'
+      @article = blog_boi_articles(:two)
       # B. use the engine's route to get there, rather than the application's one
       @routes = Engine.routes
 
-      # Parent App admin_signed_in? returns false
-      # Because admin is logged out
+      # Log admin back in for other tests
       class ::ApplicationController < ::ActionController::Base
 				helper_method :admin_signed_in?
 			  def admin_signed_in?
@@ -25,19 +25,30 @@ module BlogBoi
       assert_selector "a", text: "New Article"
     end
 
-    test "creating a Article" do
+    test "creating a hidden Article (which isn't linked on index page)" do
+    	title_of_hidden_article = "Article is hidden"
+
       visit articles_url
       click_on "New Article"
 
       fill_in "Author name", with: @article.author_name
-      fill_in "Title", with: @article.title
+      fill_in "Title", with: title_of_hidden_article
+      check 'Hidden'
       fill_in "Slug", with: 'new slug'
-      fill_in "Category names", with: @article.category_names
+      fill_in "Category names", with: 'hidden-treasure'
       fill_in "Text", with: @article.text
 
       click_on "Create Article"
 
       assert_text "Article was successfully created"
+
+      # Article should be visible by admin
+      visit articles_url
+      assert_text title_of_hidden_article
+
+      # Article should be hidden on category page
+      visit @mount_path + '/category/hidden-treasure'
+      assert_no_text title_of_hidden_article
     end
 
     test "updating a Article" do

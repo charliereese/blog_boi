@@ -9,7 +9,8 @@ module BlogBoi
 
     # GET /articles
     def index
-      @articles = Article.all
+      @articles = Article.all.where({hidden: false})
+      @articles_hidden = Article.all.where({hidden: true})
     end
 
     # GET /articles/1
@@ -54,7 +55,7 @@ module BlogBoi
 
     # GET /articles/category/cool_category
     def category_index
-    	@articles = Article.with_category_name(params[:category_name])
+    	@articles = Article.with_category_name(params[:category_name]).where(hidden: false)
     	@category_title = params[:category_name].titleize
     	render :index
     end
@@ -71,7 +72,7 @@ module BlogBoi
 
       # Only allow a trusted parameter "white list" through.
       def article_params
-        params.require(:article).permit(:title, :text, :author_name, :category_names, :slug, :description, :image)
+        params.require(:article).permit(:title, :text, :author_name, :category_names, :slug, :description, :image, :hidden)
       end
   end
 end

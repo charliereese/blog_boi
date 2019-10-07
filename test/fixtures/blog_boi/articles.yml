@@ -6,6 +6,7 @@ one:
   author: one
   description: Lit ass description for SEOz
   slug: blog-article-a
+  hidden: true
 
 two:
   title: Blog article B
@@ -13,3 +14,4 @@ two:
   author: one
   description: Lit ass description for SEOz
   slug: blog-article-b
+  hidden: false

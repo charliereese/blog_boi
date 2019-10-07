@@ -15,6 +15,18 @@
 			<% end %>
 			
 			<%= render @articles %>
+
+			<% if is_admin? %>
+
+				<h1 class="text-center col-12 mt-5">Hidden articles:</h1>
+
+				<% @articles_hidden && @articles_hidden.each do |article_hidden| %>
+
+					<%= render 'article', article: article_hidden %>
+
+				<% end %>
+
+			<% end %>
 			
 		</div>
 

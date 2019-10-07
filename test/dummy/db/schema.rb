@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_11_003115) do
+ActiveRecord::Schema.define(version: 2019_10_07_141852) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -41,14 +41,16 @@ ActiveRecord::Schema.define(version: 2019_09_11_003115) do
     t.integer "author_id"
     t.string "description"
     t.string "slug"
+    t.boolean "hidden"
+    t.index ["hidden"], name: "index_blog_boi_articles_on_hidden"
     t.index ["slug"], name: "index_blog_boi_articles_on_slug", unique: true
   end
 
   create_table "blog_boi_articles_categories", id: false, force: :cascade do |t|
     t.integer "blog_boi_article_id", null: false
     t.integer "blog_boi_category_id", null: false
-    t.index "\"article_id\", \"category_id\"", name: "index_blog_boi_article_id_category_id"
-    t.index "\"category_id\", \"article_id\"", name: "index_blog_boi_category_id_article_id"
+    t.index ["blog_boi_article_id", "blog_boi_category_id"], name: "index_blog_boi_article_id_category_id"
+    t.index ["blog_boi_category_id", "blog_boi_article_id"], name: "index_blog_boi_category_id_article_id"
   end
 
   create_table "blog_boi_categories", force: :cascade do |t|

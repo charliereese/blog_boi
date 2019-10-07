@@ -41,6 +41,7 @@ module BlogBoi
         	article: { 
         		text: 'Cool new story', 
         		title: 'Title thing',
+        		hidden: true,
         		author_name: 'Charlie Reese',
         		category_names: 'stuff A, stuff B',
         		description: 'Great description of article',

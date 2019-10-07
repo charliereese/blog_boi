@@ -1,4 +1,4 @@
-By [Charlie Reese](https://charliereese.ca) at [Clientelify](https://clientelify.com)
+By [Charlie Reese](https://charliereese.ca/about) at [Clientelify](https://clientelify.com)
 
 # BlogBoi
 
