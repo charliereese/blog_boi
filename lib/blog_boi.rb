@@ -20,7 +20,7 @@ module BlogBoi
   
   # Company info
   self.company_name = 'SaaSy'
-  self.company_description = 'business that does xyz'
+  self.company_description = 'A business that does xyz'
   self.company_logo_path = 'blog_boi/logo'
 
   # Blog info

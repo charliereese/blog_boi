@@ -15,7 +15,10 @@ module BlogBoi
 
     # GET /articles/1
     def show
-    	@meta_tags[:title] = @article[:title]
+    	@meta_tags = {
+    		title: @article.title,
+    		description: @article.description,
+    	}
     end
 
     # GET /articles/new

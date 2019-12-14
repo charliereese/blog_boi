@@ -25,6 +25,11 @@
   </div>
 
   <div class="field mt-3">
+    <%= form.label :description %>
+    <%= form.text_field :description, placeholder: 'e.g. The 3 reasons why you must use the BlogBoi engine', class: 'form-control' %>
+  </div>
+
+  <div class="field mt-3">
     <%= form.label :slug %>
     <%= form.text_field :slug, placeholder: 'e.g. appointment-reminders-for-dentists', class: 'form-control' %>
   </div>

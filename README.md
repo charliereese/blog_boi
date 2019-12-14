@@ -2,7 +2,9 @@ By [Charlie Reese](https://charliereese.ca/about) at [Clientelify](https://clien
 
 # BlogBoi
 
-BlogBoi is a rails gem / engine that provides out-of-the-box blogging functionality to your rails application
+BlogBoi is a rails gem / engine that provides out-of-the-box blogging functionality to your rails application. 
+
+It requires active_storage for photo upload / storage.
 
 ## Installation
 
@@ -11,8 +13,6 @@ BlogBoi is a rails gem / engine that provides out-of-the-box blogging functional
 ```ruby
 gem 'blog_boi', '~> 0'
 ```
-
-_Note: path may move to github and not be relative_
 
 2. Add these lines to your config/application.rb file:
 

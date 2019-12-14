@@ -3,7 +3,7 @@
 	<%= render partial: 'category', collection: article.categories %>
 
   <a class="d-block article mt-2" 
-		href="/blog/<%= article.slug %>">
+		href="<%= root_url + article.slug %>">
   	
   	<h2 class="text-blue mb-0">
   		<%= article.title %>		

@@ -56,6 +56,9 @@ module BlogBoi
     test "should show article" do
       get article_url(@article.slug)
       assert_response :success
+
+      meta_tag_description = css_select('meta[name="description"]')
+      assert meta_tag_description.attribute('content').value, @article.description
     end
 
     test "should get edit" do
