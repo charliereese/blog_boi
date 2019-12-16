@@ -18,6 +18,7 @@ module BlogBoi
     	@meta_tags = {
     		title: @article.title,
     		description: @article.description,
+    		image: @article.image.attached? ? main_app.url_for(@article.image) : nil,
     	}
     end
 

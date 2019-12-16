@@ -10,12 +10,16 @@ module BlogBoi
       @routes = Engine.routes
       # B. use the engine's route to get there, rather than the application's one
       @article = blog_boi_articles(:one)
+      @article.image.attach(create_file_blob)
       @author = users(:one)
     end
 
     test "should get index" do
       get articles_url
       assert_response :success
+
+      meta_tag_image = css_select('meta[property="og:image"]')
+      assert meta_tag_image.attribute('content').value.present?
     end
 
     test "should get index - custom company name" do
@@ -58,7 +62,10 @@ module BlogBoi
       assert_response :success
 
       meta_tag_description = css_select('meta[name="description"]')
-      assert meta_tag_description.attribute('content').value, @article.description
+      assert_equal meta_tag_description.attribute('content').value, @article.description
+    
+      meta_tag_image = css_select('meta[property="og:image"]')
+      assert meta_tag_image.attribute('content').value.present?
     end
 
     test "should get edit" do

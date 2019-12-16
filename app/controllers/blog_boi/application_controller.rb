@@ -21,7 +21,9 @@ module BlogBoi
     end
 
     def create_meta_tags_obj
-    	@meta_tags = {}
+    	@meta_tags = {
+    		image: helpers.image_url(BlogBoi.blog_meta_image)
+    	}
     end
 
   end

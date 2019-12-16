@@ -63,7 +63,7 @@ mount BlogBoi::Engine, at: "/blog"
 BlogBoi.author_class = "User" # name of active record model containing authors with property called name (for author's name)
 ```
 
-See lib/blog_boi.rb for all customization options.
+See lib/blog_boi.rb for all customization options (like setting your Blog's meta description / image).
 
 7. Finally, your parent application must define the method `admin_signed_in?`. If you are using Devise, this method may already exist. It should return true if the blog admin is signed in, and false if not. When it returns true, you may create, update, and destroy blog articles. It should be available in controllers and views; it should be defined in ApplicationController, and should be marked a helper method. E.g.
 
