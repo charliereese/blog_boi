@@ -93,6 +93,11 @@ To override SCSS bootstrap mixins / styles, add a file in parent application cal
 
 Override the header or footer by placing your own files at `views/layouts/_header` or `views/layouts/_footer`
 
+Further, you can add your own css classes / ids to your markup: 
+- https://kramdown.gettalong.org/quickref.html
+- https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/
+- `{: .cls}`
+
 ## Running tests
 
 - Run all tests other than system: `rake app:test`
