@@ -6,7 +6,6 @@ module BlogBoi
     require 'jquery-rails'
     require 'rails-ujs'
 
-
 		initializer "blog_boi.assets.precompile" do |app|
 			app.config.assets.precompile += %w( bootstrap_customizer.scss blog_boi/logo.png blog_boi/star.svg )
 		end

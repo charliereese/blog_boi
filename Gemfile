@@ -24,10 +24,9 @@ group :test do
 	gem 'puma', '~> 3.11'
 
 	# For testing
-	gem 'byebug'
 	gem 'minitest-reporters'
 	gem 'simplecov'
 end
 
 # To use a debugger
-# gem 'byebug', group: [:development, :test]
+gem 'byebug', group: [:development, :test]

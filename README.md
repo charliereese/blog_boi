@@ -30,6 +30,7 @@ ActiveStorage::Engine.config
 ```bash
 $ bundle
 $ rake active_storage:install `# If hasn't been run yet`
+$ rake active_storage:update # if upgrading to rails 6
 $ rails blog_boi:install:migrations `# not needed for dummy test application`
 $ rails db:migrate
 ```
@@ -38,12 +39,12 @@ Your storage.yml file should now have this code:
 
 ```
 test:
-  service: Disk
-  root: <%= Rails.root.join("tmp/storage") %>
+	service: Disk
+	root: <%= Rails.root.join("tmp/storage") %>
 
 local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+	service: Disk
+	root: <%= Rails.root.join("storage") %>
 ```
 
 _Note: $ rails railties:install:migrations to copy all new migrations_
@@ -70,11 +71,11 @@ See lib/blog_boi.rb for all customization options (like setting your Blog's meta
 ```
 class ApplicationController < ActionController::Base
 
-  helper_method :admin_signed_in?
+	helper_method :admin_signed_in?
 
-  def admin_signed_in?
-    ...
-  end
+	def admin_signed_in?
+		...
+	end
 
 end
 ```
@@ -116,9 +117,7 @@ The gem is currently available as open source software under the terms of the [M
 
 ## Contributing
 
-This gem is currently not actively accepting contributions. 
-
-With that in mind, if you'd like to make a fix / change, please create a pull request (and when I have a moment - probably in a couple weeks time - I'll have a look)!
+If you'd like to make a fix / change, please create a pull request; when I have a moment, I'll have a look!
 
 ## Updating gem version (for maintainers)
 

@@ -15,12 +15,8 @@
 
   	<ul class="list-inline mb-0">
   	
-  		<li class="list-inline-item">
-  			<%= article.author.name %>
-  		</li>
-
-  		<li class="list-inline-item">
-  			<%= article.updated_at.strftime("%B %e, %Y") %>
+  		<li class="list-inline-item text-muted">
+  			by <%= article.author.name %> on <%= article.updated_at.strftime("%B %e, %Y") %>
   		</li>
 
   	</ul>
