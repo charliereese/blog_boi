@@ -21,7 +21,7 @@ group :test do
   # gem 'chromedriver-helper'
 
   # Use Puma as the app server
-	gem 'puma', '~> 3.11'
+	gem 'puma', '~> 5.6'
 
 	# For testing
 	gem 'minitest-reporters'
